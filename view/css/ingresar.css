@@ -1,0 +1,25 @@
+.card .card-header {
+    padding: 10px;
+    background-color: #26A69A;
+    text-align: center;
+}
+input[type=text],
+input[type=password]{
+    border: 1px solid #ddd;
+    padding: 0px 10px;
+    box-sizing:border-box;
+}
+.page-login{
+    background-color: #333;
+
+}
+
+
+@media only screen and (max-width: 992px) {
+  .modal-content {
+    width: 50%;
+  }
+}
+
+
+
