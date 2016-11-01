@@ -1,0 +1,16 @@
+section
+{
+    padding-left: 310px;
+}
+.card-content
+{
+    width: 100%;
+
+}
+
+
+@media only screen and (max-width : 992px) {
+    footer, section {
+        padding-left: 0;
+    }
+}
