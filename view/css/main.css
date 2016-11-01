@@ -14,3 +14,14 @@ section
         padding-left: 0;
     }
 }
+
+
+.modal .modal-content {
+  padding:0px;
+}
+
+
+section .space
+{
+ margin: 10px; 
+}
