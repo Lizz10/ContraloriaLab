@@ -1,0 +1,43 @@
+.card .card-header {
+      padding: 10px;
+    background-color: #26A69A;
+    text-align: center;
+    margin: 0px;
+    }  
+
+  
+    .contenedor {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .center{
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+    .card-content
+    {
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+     section {
+      padding-left: 310px;
+    }
+    .page-footer {
+      padding-left:310px;
+      position: fixed;
+      bottom: 0px;
+      width: 1400px;
+      height: 80px;
+
+      opacity: 0.5;
+    }
+
+    @media only screen and (max-width : 992px) {
+     footer, section {
+        padding-left: 0;
+      }
+    }
+  
