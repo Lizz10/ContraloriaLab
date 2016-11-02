@@ -47,7 +47,7 @@ $err = isset($_GET['error']) ? $_GET['error'] : null ;
                         <i class="material-icons medium white-text">perm_contact_calendar</i>
                     </div>
                     <div class="card-content">
-                    <!--formulario de login-->
+                    <!--manejo de errores por url-->
                         <?php 
                          if($err==1){
                           echo "Usuario o Contraseña Erróneos <br />";
@@ -56,6 +56,11 @@ $err = isset($_GET['error']) ? $_GET['error'] : null ;
                            echo "Debe iniciar sesion para poder acceder el sitio. <br />";
                          }
                         ?>                       
+                        <!--
+                          =============================
+                                 formulario login
+                          ============================= 
+                        -->
                         <form action="core/session_init.php" method="POST">
                             <div class="input-field col s12">
                                 <input id="username" name="usern" type="text" class="validate" pattern="\S{3,}" required title="minimo 3 caracteres">
