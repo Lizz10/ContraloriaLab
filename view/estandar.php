@@ -1,3 +1,26 @@
+<?php
+   require '../core/class/host.php';
+   //$objData = new Database();
+
+   //clease host
+   $objhost = new host();
+   $host=$objhost->nombre();
+
+  //llamamos a la clase de inici de sesion
+   require'../core/class/sessions.php';
+   $objses = new Sessions();
+   $objses->init();
+  //llamaos datos de sesion
+   $nameU = $objses->get('loginUsers');
+   $idUse = $objses->get('idUser');
+   $tipoU = $objses->get('idProfile');
+  
+   $user = isset($nameU) ? $nameU : null ;
+
+   if($user == '' or $tipoU <> 1){
+     header('Location: http://'.$host.'/C/?error=2');
+   }
+?>
    <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +36,7 @@
 <nav class="top-nav teal lighten-2">
         <ul class="right">
           <li>
-            <a href="#">
+            <a href="../core/log_out.php">
               <i class="large material-icons right">perm_identity
               </i>Salir
             </a>
