@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 
+<?php
+//inicio de variables de error
+$err = isset($_GET['error']) ? $_GET['error'] : null ;
+
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -10,7 +15,7 @@
 
     </head>
     <body>
-
+   <!--barra de nav-->
         <nav class="teal lighten-2">
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">Bienvenido</a>
@@ -34,6 +39,7 @@
                 </ul>
             </div>
         </nav>
+    <!--end barra de nav-->    
         <div class="modal" id="login">
             <div class="modal-content">
                 <div class="card bordered z-depth-2">
@@ -41,19 +47,29 @@
                         <i class="material-icons medium white-text">perm_contact_calendar</i>
                     </div>
                     <div class="card-content">
-                        <form action="noseque.php" method="get">
+                    <!--formulario de login-->
+                        <?php 
+                         if($err==1){
+                          echo "Usuario o Contraseña Erróneos <br />";
+                         }
+                         if($err==2){
+                           echo "Debe iniciar sesion para poder acceder el sitio. <br />";
+                         }
+                        ?>                       
+                        <form action="core/session_init.php" method="POST">
                             <div class="input-field col s12">
-                                <input id="username" type="text" class="validate" pattern="\S{3,}" required title="minimo 3 caracteres">
+                                <input id="username" name="usern" type="text" class="validate" pattern="\S{3,}" required title="minimo 3 caracteres">
                                 <label for="username">Usuario</label>
                             </div>
                             <div class="input-field col s12">
-                                <input id="password" type="password" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+                                <input id="password" name="passwd" type="password" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
                                 <label for="password">Password</label>
                             </div>
                             <input type="checkbox" class="filled-in" id="filled-in-box"/>
                             <label for="filled-in-box">Recordar contraseña</label>
                             <button type="submit" id="mulai_login" name="mulai_login" class="btn  right waves-effect waves-light white-text">Ingresar</button>
                         </form>
+                     <!--end formulaio de login-->   
                     </div>
                 </div>
             </div>
