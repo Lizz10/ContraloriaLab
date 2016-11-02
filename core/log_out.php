@@ -6,5 +6,5 @@ $objSe = new Sessions();
 $objSe->init();
 $objSe->destroy();
 
-header('location: index.php');
+header('location:../');
 

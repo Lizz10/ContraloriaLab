@@ -38,10 +38,9 @@ class Users{
                         $this->objSe->set('loginUsers', $result[0]['loginUsers']);
                         $this->objSe->set('nameProfi', $result[0]['nameProfi']);
                         $this->objSe->set('idProfile', $result[0]['idProfile']);                        
-                      //  header('Location: ../view/estandar.php');
-                        echo "Ha ingresado como Ususario standard";
-                        print_r($_POST);
-
+                       header('Location: ../view/estandar.php');
+                       // echo "Ha ingresado como Ususario standard";
+                       
 			break;
                     case 'Admin':
                         $this->objSe->init();
@@ -52,8 +51,9 @@ class Users{
                         header('Location:../view/administrador.php');
                     
                         //echo '<br><a href="log_out.php">Cerrar</a>';
-                        echo "Ha ingresado como Ususario Administrador";
-                        print_r($_POST);
+                        header('Location: ../view/administrador.php');
+                        //echo "Ha ingresado como Ususario Administrador";
+                        
                         
 			break;
                 }
