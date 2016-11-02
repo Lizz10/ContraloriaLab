@@ -1,4 +1,8 @@
+<?php
+//inicio de variables de error
+$err = isset($_GET['error']) ? $_GET['error'] : null ;
 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +32,11 @@
   </script>
 </head>
 <body>
-
+<!--
+    =============================
+         encabezado
+    ============================= 
+    -->
   <div class="row teal lighten-2 ">
     <div class="col s12 l4 center-align">
 <img src="img/img1.jpg" width="75%" class="space"> 
@@ -48,11 +56,7 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
  </p>
 </div>
 </div>
-    <!--
-    =============================
-         termina encabezado
-    ============================= 
-    -->
+    
 <div class="row" id="color">
   <div class="col s12 card-panel teal lighten-2" id="panel">
     <p id="encabezado">solicitud de certificado laboral</p>
@@ -95,6 +99,15 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
       <div class="input-field col s12 m12">
         <button class="btn waves-effect waves-light" type="submit" id="botton">Enviar</button>   
       </div>
+
+       <?php 
+        if($err==1){
+          echo "Algo Salio Mal Intenta Mas Tarde <br />";
+        }else if($err==2){
+            echo "Solicitud Enviada Con Exito.<br />";
+        }
+       ?>
+
   </form>  
 
   </div>        

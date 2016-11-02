@@ -17,7 +17,7 @@
   
    $user = isset($nameU) ? $nameU : null ;
 
-   if($user == '' or $tipoU <> 1){
+   if($user == '' or $tipoU <> 2){
      header('Location: http://'.$host.'/C/?error=2');
    }
 ?>

@@ -5,21 +5,41 @@
 
         </div>
         <div class="card-content">
-          <form>
+        <!--
+            ==================================
+              formulario creacion de Usuario
+            ================================== 
+        -->
+
+        
+          <form action="../core/create_account_exe.php" method="POST" >
+            
             <div class="input-field col s12">
-              <input id="username" type="text" class="validate" length="15">
+              <input id="username" type="text" class="validate" length="15" name="userN">
               <label for="username">Usuario</label>
             </div>
+
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate"  length="30">
+              <input id="password" type="password" class="validate"  length="30" name="userP">
               <label for="password">Ingrese una clave</label>
             </div>
-             <div class="input-field col s12">
-              <input id="password" type="password" class="validate" length="30">
-              <label for="password">Por favor repita su clave</label>
+
+            <div class="input-field col s12">
+              <input id="Email" type="text" class="validate"  length="30" name="userC" >
+              <label for="Email">Email</label>
             </div>
-             <br>
-              <button type="button" id="mulai_login" name="mulai_login" class="btn  right waves-effect waves-light white-text">Crear</button>
+             <div class="switch">
+                <label>
+                    Standar
+                  <input type="checkbox" name="tip">
+                  <span class="lever"></span>
+                    Administrador
+               </label>
+  </div>
+           
+            
+              <button type="submit" id="mulai_login" class="btn  right waves-effect waves-light white-text">Crear
+              </button>
           </form>
         </div>
         <div class="card-action clearfix">

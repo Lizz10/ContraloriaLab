@@ -52,16 +52,13 @@ class Users{
                     
                         //echo '<br><a href="log_out.php">Cerrar</a>';
                         header('Location: ../view/administrador.php');
-                        //echo "Ha ingresado como Ususario Administrador";
-                        
-                        
+                        //echo "Ha ingresado como Ususario Administrador";              
 			break;
                 }
                 
             }else{
-                //header('Location: ../?error=1');
-                echo "Ha ingresado como Ususario nada";
-                print_r($_POST);
+                //usuario o pass Erroneo 
+                header('Location: ../?error=1');
             }		
 	}
   

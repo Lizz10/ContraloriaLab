@@ -1,4 +1,4 @@
- <?php
+<?php
    require '../core/class/host.php';
    //$objData = new Database();
 
@@ -20,7 +20,7 @@
    if($user == '' or $tipoU <> 1){
      header('Location: http://'.$host.'/C/?error=2');
    }
-  ?>
+?>
 
 <!DOCTYPE html>
 <html>
