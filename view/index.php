@@ -69,12 +69,21 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
     ======================================== 
     -->
   <form action="../core/create_solic_exe.php" method="POST" name="DatosSolic">
+       
+       <script>
+         var f = new Date();
+          var anio = f.getFullYear();
+          var mes = (f.getMonth() +1);
+          var dia = f.getDate();
 
-      <div class="input-field col s12 m12">
-        <input placeholder="Ingrese su cedula" type="number" length="30" class="validate" name="cedula" required>
-        <label for="first_name">Cedula</label>
-      </div>
+            document.write( '<input type="hidden" name="facha" value='+anio+"/"+mes+"/"+dia+'></input>' );
+        </script>
 
+
+
+
+      
+   <!--
       <div class="input-field col s12 m12">
         <select id="prueba" name="tipoSoli">
           <option value="" disabled>Elija el tipo de certificado</option>
@@ -83,18 +92,42 @@ document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.ge
         </select>
           <label>Tipo de certificado</label>
       </div>
+   -->
+  <div class="row" > 
+      <div class="col s12 m6 l6">
+        <input placeholder="Ingrese su cedula" type="number" length="30" class="validate"  min="0" name="cedula" required>
+        <label for="first_name">Cedula</label>
+      </div>
 
-      <div class="col s12 m12">
+      <div class="col s6 m3 l3">
+        <input type="checkbox" id="test9" name="tipoSoli" />
+        <label for="test9">funciones</label>
+      </div>
+
+      <div class="col s6 m3 l3 ">
         <input type="checkbox" id="test5" name="concertadas" />
         <label for="test5">Concertadas</label>
       </div>
 
+   </div>   
+    <!--
       <div class="row">
         <div class="input-field col s12">
           <textarea id="textarea1" class="materialize-textarea" name="motivo"></textarea>
           <label for="textarea1">Motivo de la solicitud</label>
         </div>
       </div>
+     -->
+      
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" length="100" maxlength="100" name="motivo" required></textarea>
+            <label for="textarea1">Motivo de la solicitud</label>
+          </div>
+        </div>
+     
+
+
           
       <div class="input-field col s12 m12">
         <button class="btn waves-effect waves-light" type="submit" id="botton">Enviar</button>   
