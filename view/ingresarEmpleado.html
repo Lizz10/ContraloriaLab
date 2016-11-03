@@ -1,69 +1,61 @@
+ <!--
+    =============================
+        formulario Ingreso
+    ============================= 
+  -->
+
  <form action="noseque.php" method="get">
- <div class="row">
- <div class="file-field input-field col s12 m12">
-      <div class="btn">
-        <span>Foto</span>
-        <input type="file" multiple>
+  <div class="row">
+ 
+      <div class="input-field col s6 m4">
+        <input id="username" type="text" class="validate" pattern="\S{3,}" required title="minimo 3 caracteres">
+        <label for="username">Nombre</label>
       </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder="Subir foto">
+      <div class="input-field col s6 m4">
+        <input id="password" type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+        <label for="password">apellido</label>
       </div>
-    </div>
-   <div class="input-field col s6 m4">
-              <input id="username" type="text" class="validate" pattern="\S{3,}" required title="minimo 3 caracteres">
-              <label for="username">Nombre</label>
-            </div>
-            <div class="input-field col s6 m4">
-              <input id="password" type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="password">apellido</label>
-            </div>
-             <div class="input-field col s6 m4">
-              <input id="password" type="email" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="password">Email</label>
-            </div>
-            <div class="input-field col s6 m4">
-               <input type="date" class="datepicker" pattern="\S{4,}" required title="minimo 4 caracteres">
-              
-            </div>
-            <div class="input-field col s6 m4">
-              <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="password">Estado civil</label>
-            </div>
-             <div class="input-field col s6 m4">
-              <input type="tel" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="password">Telefono</label>
-            </div>
-                 <div class="input-field col s6 m4">
-              <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="password">Libreta militar</label>
-            </div>
-               <div class="input-field col s6 m4">
-              <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="password">Esperiencia laboral</label>
-            </div>
-               <div class="input-field col s6 m4">
-              <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+      <div class="input-field col s6 m4">
+        <input id="password" type="email" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+        <label for="password">Email</label>
+      </div>
+      <div class="input-field col s6 m4">
+        <input type="date" class="datepicker" pattern="\S{4,}" required title="minimo 4 caracteres">        
+      </div>
+      <div class="input-field col s6 m4">
+        <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+        <label for="password">Estado civil</label>
+      </div>
+      <div class="input-field col s6 m4">
+        <input type="tel" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+        <label for="password">Telefono</label>
+      </div>
+      <div class="input-field col s6 m4">
+        <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+        <label for="password">Libreta militar</label>
+      </div>
+       <div class="input-field col s6 m4">
+         <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+          <label for="password">Esperiencia laboral</label>
+       </div>
+        <div class="input-field col s6 m4">
+            <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
               <label for="password">Direccion</label>
             </div>
-               <div class="input-field col s6 m4">
-              <input type="tel" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+        <div class="input-field col s6 m4">
+            <input type="tel" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
               <label for="Celular">Celular</label>
             </div>
-             <div class="input-field col s6 m4">
-              <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
-              <label for="lugar">Lugar de nacimiento</label>
-              
+        <div class="input-field col s6 m4">
+            <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+              <label for="lugar">Lugar de nacimiento</label>  
             </div>
-               <div class="input-field col s6 m4">
-              <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
+         <div class="input-field col s6 m4">
+            <input type="text" class="validate" pattern="\S{4,}" required title="minimo 4 caracteres">
               <label for="Celular">Grado de intruccion</label>
             </div>
-            <div class="input-field col s6 m4">
-                 <button type="submit" id="mulai_login" name="mulai_login" class="btn  right waves-effect waves-light white-text card-content">Guardar</button>
-           </div>
-              
-              
-        
- </div>
-            
-          </form>
+        <div class="input-field col s6 m4">
+            <button type="submit" id="mulai_login" name="mulai_login" class="btn  right waves-effect waves-light white-text card-content">Guardar</button>
+        </div>   
+  </div>
+</form>
